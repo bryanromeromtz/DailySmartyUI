@@ -3,8 +3,8 @@ import {
 } from "../actions/types";
 
 const INIT_STATE = {
-  post: [],
-  recentPost: []
+  posts: [],
+  recentPosts: []
 }
 
 export default function (state = INIT_STATE, action) {
