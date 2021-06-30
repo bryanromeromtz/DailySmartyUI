@@ -12,8 +12,6 @@ class RecentPosts extends Component {
 
   componentDidMount() {
     this.props.fetchRecentPosts();
-    console.log("debbuging", this.props);
-
   }
 
   renderPosts = function () {
@@ -23,7 +21,7 @@ class RecentPosts extends Component {
           <Post {...post} key={index} />
         )
       }
-    })
+    });
     return posts;
   }
 
