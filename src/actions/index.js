@@ -1,6 +1,9 @@
 import axios from "axios"
 
-import { SET_RECENT_POSTS } from "./types";
+import {
+  SET_RECENT_POSTS,
+  SET_RESULTS_POSTS,
+} from "./types";
 
 export function fetchRecentPosts() {
   return function (dispatch) {
@@ -20,10 +23,10 @@ export function fetchPostsWithQuery(query) {
       .then(response => {
         console.log('fetch post with query', response.data.posts);
 
-        //dispatch({
-        //type: SET_RECENT_POSTS,
-        //payload: response.data.posts
-        //})
+        dispatch({
+          type: SET_RESULTS_POSTS,
+          payload: response.data.posts
+        })
       })
   }
 }
