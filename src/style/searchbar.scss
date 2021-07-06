@@ -1,0 +1,28 @@
+.search-bar input {
+  width: 60vw;
+  height: 80px;
+  padding-left: 35px;
+  font-size: 40px;
+  box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
+  border: 0px solid transparent;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  &::placeholder {
+    color: $gray;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.search-bar__wrapper {
+  display: grid;
+  grid-row-gap: 23px;
+  .search-bar__message {
+    color: $color-gray-two;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: right;
+  }
+}

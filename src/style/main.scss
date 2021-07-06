@@ -1,3 +1,25 @@
-.post-topic {
-  margin: 0 4px;
+body {
+  font-family: "Nunito", sans-serif;
 }
+
+.post-topic {
+  margin: 0px 4px;
+}
+
+.app-wrapper {
+  display: grid;
+  justify-content: center;
+}
+
+.home {
+  display: grid;
+  justify-items: center;
+  height: 100vh;
+  width: 66vw;
+  align-content: space-around;
+}
+
+$gray: #666666;
+$color-gray-two: #b3b3b3;
+
+@import "./searchbar.scss";
