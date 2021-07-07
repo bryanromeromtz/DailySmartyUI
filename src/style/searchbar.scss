@@ -1,4 +1,5 @@
 .search-bar {
+  display: grid;
   .search-bar__wrapper {
     display: grid;
     grid-row-gap: 23px;
@@ -10,9 +11,6 @@
       box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
       border: 0px solid transparent;
       border-radius: 5px;
-
-      height: 80px;
-      font-size: 40px;
 
       transition: all 0.2s ease;
 
@@ -34,5 +32,20 @@
       font-weight: 600;
       color: $color-gray-two;
     }
+  }
+}
+
+.search-bar__results {
+  margin-top: 50px;
+  input {
+    font-size: 22px;
+    height: 36px;
+  }
+}
+
+.search-bar__home {
+  input {
+    height: 70px;
+    font-size: 40px;
   }
 }

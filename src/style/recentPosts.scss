@@ -17,5 +17,8 @@
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 42px;
     }
+    .recent-post__topics {
+      color: $color-gray-one;
+    }
   }
 }
