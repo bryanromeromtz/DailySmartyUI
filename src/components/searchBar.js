@@ -17,6 +17,7 @@ class SearchBar extends Component {
     )
   }
 
+
   render() {
 
     const { handleSubmit } = this.props;
