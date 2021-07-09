@@ -40,16 +40,24 @@
 .post-link {
   display: flex;
   min-height: 70px;
+  flex-basis: 205px;
+  margin-right: 37px;
   .post-link__box {
+    display: grid;
     min-width: 70px;
     background-color: $color-gray-three;
   }
   .post-link__link a {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     margin-left: 20px;
     color: $color-gray-one;
     font-size: 14px;
     line-height: 17px;
   }
+}
+
+.no-content {
+  color: $color-gray-one;
+  font-size: 14px;
+  line-height: 17px;
 }

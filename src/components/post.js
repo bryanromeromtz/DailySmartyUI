@@ -32,6 +32,11 @@ export default class Post extends Component {
         </div>
       )
     });
+    if (links == 0) {
+      return (
+        <p className="no-content">No Post Link</p>
+      )
+    }
     return links;
   }
 
