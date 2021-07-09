@@ -27,12 +27,33 @@ export default class Post extends Component {
         <div className="post-link" key={index}>
           <div className="post-link__box"></div>
           <div className="post-link__link">
-            <a href={post_link.link_url} target="_blank">Useful Link #{index + 1}</a>
+            <a href={post_link.link_url} target="_blank">{this.getNameForPostLink(post_link.link_url)}</a>
           </div>
         </div>
       )
     });
     return links;
+  }
+
+  getNameForPostLink(str) {
+    let n = str.lastIndexOf("/");
+    let link = str.substring(n + 1, str.length);
+    if ((n + 1) === str.length) {
+      link = str.slice(0, n);
+      n = link.lastIndexOf("/");
+      link = str.substring(n + 1, str.length - 1);
+    }
+
+    if ((link.includes(".io"))) {
+      link = link.replace(".io", "");
+    } else if ((link.includes(".html"))) {
+      link = link.replace(".html", "");
+    } else if ((link.includes(".htm"))) {
+      link = link.replace(".htm", "");
+    }
+
+    return link;
+
   }
 
   render() {
